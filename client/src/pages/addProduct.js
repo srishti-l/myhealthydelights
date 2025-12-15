@@ -26,12 +26,14 @@ function AddProduct() {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Add Product</h2>
-            <input placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-            <input placeholder="Category" value={category} onChange={e => setCategory(e.target.value)} />
-            <textarea placeholder="Description" value={description} onChange={e => setDescription(e.target.value)} />
-            <input placeholder="Price" type="number" value={price} onChange={e => setPrice(e.target.value)} />
-            <input placeholder="Health Concerns" value={healthConcerns} onChange={e => setHealthConcerns(e.target.value.split(","))} />
-            <button type="submit">Add Product</button>
+            <div className="form-generic">
+                <input placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+                <input placeholder="Category" value={category} onChange={e => setCategory(e.target.value)} />
+                <textarea placeholder="Description" value={description} onChange={e => setDescription(e.target.value)} />
+                <input placeholder="Price" type="number" value={price} onChange={e => setPrice(e.target.value)} />
+                <input placeholder="Health Concerns" value={healthConcerns} onChange={e => setHealthConcerns(e.target.value.split(","))} />
+                <button type="submit">Add Product</button>
+            </div>
         </form>
     )
 }
